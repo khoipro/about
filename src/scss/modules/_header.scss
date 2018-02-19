@@ -18,6 +18,8 @@
   width: 30px;
   height: 30px;
   background: $c-light;
+  user-select: none;
+  cursor: pointer;
   box-shadow: 1px 1px 0 rgba($c-black, 0.1);
   @include breakpoint(m) {
     width: 50px;
@@ -39,9 +41,8 @@
     &:first-child {
       @include font(24, 16);
       color: $c-black;
+      margin-left: -1.5px;
       transition: all .3s ease;
-      user-select: none;
-      cursor: pointer;
       &:hover {
         color: $c-dark;
       }

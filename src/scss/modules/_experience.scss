@@ -31,11 +31,45 @@
   }
 }
 
+/**
+Layout
+ */
+
+.experience__item-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+
+.experience__item-meta {
+  margin: 0 5px 0 0;
+  @include breakpoint(m) {
+    margin: 0;
+    padding: 5px 30px 0 0;
+  }
+}
+
+.experience__item-content {
+  @include breakpoint(m) {
+    flex: 1 1 0;
+  }
+}
+
+.experience__item-footer {
+  margin-top: 5px;
+}
+
 .experience__item-block {
   display: block;
 }
 
-.experience__item-title {
-  @include font(20, 24);
-  font-weight: 700;
+.experience__item-date,
+.experience__item-tag {
+  @include font(14, 16);
+  color: $c-light;
+}
+
+.experience__item-description {
+  margin-top: 5px;
 }

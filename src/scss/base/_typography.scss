@@ -13,6 +13,16 @@ strong {
   font-weight: 700;
 }
 
+.section-headline {
+  @include font(24, 28);
+  margin-bottom: 20px;
+}
+
+.section-title {
+  @include font(20, 24);
+  font-weight: 700;
+}
+
 .wysiwyg {
   p {
     margin-bottom: 1em;

@@ -13,15 +13,19 @@ body {
 }
 
 .main {
-  max-width: 900px;
   margin: 0 auto;
+  padding: 0 20px;
+  @include breakpoint(l) {
+    max-width: 900px;
+    padding: 0;
+  }
 }
 
 .section {
   margin-bottom: 15px;
   padding: 20px 0;
   background: $c-white;
-  box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 2px 3px rgba(0,0,0,.2);
+  box-shadow: 0 0 0 1px rgba($c-black,.1), 0 2px 3px rgba($c-black,.2);
   border-radius: 2px;
   @include breakpoint(m) {
     margin-bottom: 25px;
