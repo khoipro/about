@@ -15,6 +15,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2015-ie": "^6.7.0",
+    "livereload": "^0.6.3",
     "node-sass": "^4.5.3"
   },
   "scripts": {
@@ -24,6 +25,6 @@
     "deploy": "npm run css-deploy && npm run js-build",
     "js-build": "babel src/js --out-dir assets/js",
     "js-watch": "npm run js-build -- --watch",
-    "start": "npm run css-watch | npm run js-watch"
+    "start": "npm run css-watch | npm run js-watch | livereload assets/css assets/js"
   }
 }
