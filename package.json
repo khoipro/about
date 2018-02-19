@@ -1,0 +1,29 @@
+{
+  "name": "bluehost",
+  "version": "1.0.0",
+  "description": "A static web hosting template",
+  "keywords": [
+    "sass",
+    "static",
+    "hosting",
+    "template"
+  ],
+  "author": "Khoi Nguyen",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^7.1.5",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015-ie": "^6.7.0",
+    "node-sass": "^4.5.3"
+  },
+  "scripts": {
+    "css-deploy": "npm run css-build && npm run css-postcss",
+    "css-build": "node-sass src/scss/main.scss assets/css/main.css",
+    "css-watch": "npm run css-build -- --watch",
+    "deploy": "npm run css-deploy && npm run js-build",
+    "js-build": "babel src/js --out-dir assets/js",
+    "js-watch": "npm run js-build -- --watch",
+    "start": "npm run css-watch | npm run js-watch"
+  }
+}
