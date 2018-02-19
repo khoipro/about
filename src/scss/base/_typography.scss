@@ -3,6 +3,21 @@ html {
 }
 
 body {
+  @include font(16, 21);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: $f-sans;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.wysiwyg {
+  p {
+    margin-bottom: 1em;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
 }

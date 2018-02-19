@@ -1,0 +1,29 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: rgba($c-black, 0.1);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 15px;
+  padding: 20px 0;
+  background: $c-white;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 2px 3px rgba(0,0,0,.2);
+  border-radius: 2px;
+  @include breakpoint(m) {
+    margin-bottom: 25px;
+  }
+}

@@ -1,0 +1,6 @@
+.intro__description {
+  margin-bottom: 10px;
+  @include breakpoint(m) {
+    margin-bottom: 20px;
+  }
+}

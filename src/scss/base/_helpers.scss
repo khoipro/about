@@ -1,0 +1,4 @@
+@mixin font($font-size: 16, $line-height: 16) {
+  font-size: #{$font-size / $font-base}rem;
+  line-height: #{$line-height / $font-size};
+}

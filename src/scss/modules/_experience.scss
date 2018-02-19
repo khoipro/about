@@ -1,0 +1,41 @@
+.experience {
+  padding-left: 0;
+  padding-right: 0;
+  .container {
+    padding: 0;
+  }
+}
+
+.experience__header {
+  padding: 0 20px;
+}
+
+.experience__list {
+  padding-top: 10px;
+  @include breakpoint(m) {
+    padding-top: 20px;
+  }
+}
+
+.experience__item {
+  margin-bottom: 10px;
+  padding: 0 20px 20px;
+  border-bottom: 1px solid rgba($c-black, 0.05);
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+  @include breakpoint(m) {
+    margin-bottom: 20px;
+  }
+}
+
+.experience__item-block {
+  display: block;
+}
+
+.experience__item-title {
+  @include font(20, 24);
+  font-weight: 700;
+}

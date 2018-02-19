@@ -1,0 +1,17 @@
+$f-sans: 'Roboto Condensed', Arial, Helvetica Neue, sans-serif;
+$font-base: 16;
+
+$breakpoints: (
+  'xs': 320px,
+  's': 480px,
+  'sm': 600px,
+  'm': 768px,
+  'l': 1024px,
+  'xl': 1280px,
+  'xxl': 1600px
+);
+
+$c-black: #000;
+$c-dark: #333;
+$c-light: #888;
+$c-white: #fff;

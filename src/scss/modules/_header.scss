@@ -1,0 +1,102 @@
+.header {
+  padding: 10px 0;
+  background: $c-white;
+  @include breakpoint(m) {
+    padding: 20px 0;
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  display: inline-flex;
+  align-items: flex-end;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: $c-light;
+  box-shadow: 1px 1px 0 rgba($c-black, 0.1);
+  @include breakpoint(m) {
+    width: 50px;
+    height: 50px;
+  }
+  &:hover {
+    span {
+      &.dotted {
+        &:before {
+          right: 15px;
+        }
+        &:after {
+          top: 14px;
+        }
+      }
+    }
+  }
+  span {
+    &:first-child {
+      @include font(24, 16);
+      color: $c-black;
+      transition: all .3s ease;
+      user-select: none;
+      cursor: pointer;
+      &:hover {
+        color: $c-dark;
+      }
+      @include breakpoint(m) {
+        @include font(48, 35);
+        margin-left: -2px;
+      }
+    }
+    &.dotted {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 10px;
+      height: 10px;
+      background: $c-white;
+      border-radius: 50%;
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        background: $c-white;
+        transition: all .3s ease;
+      }
+      &:before {
+        right: 5px;
+        width: 20px;
+        height: 1px;
+      }
+      &:after {
+        right: 4px;
+        width: 1px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.header__nav {
+  display: none;
+  @include breakpoint(m) {
+    display: block;
+    margin-left: auto;
+  }
+  .menu-item {
+    @include breakpoint(m) {
+      display: inline-block;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    a {
+      @include font(16, 24);
+      letter-spacing: 0.25px;
+    }
+  }
+}
